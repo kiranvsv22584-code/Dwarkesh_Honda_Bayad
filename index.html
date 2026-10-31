@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#c8102e">
+  <meta name="description" content="Dwarkesh Honda Bayad — Honda બાઇક અને સ્કૂટર વિશે માહિતી, ફાઇનાન્સ પૂછપરછ અને WhatsApp સંપર્ક.">
+  <title>Dwarkesh Honda | Bayad</title>
+  <style>
+    :root{--red:#c8102e;--dark:#151515;--muted:#666;--light:#f6f6f6;--white:#fff;--line:#e9e9e9}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,"Noto Sans Gujarati",sans-serif;color:var(--dark);background:#fff;line-height:1.55}
+    a{color:inherit;text-decoration:none}
+    .topbar{background:#111;color:#fff;text-align:center;padding:8px 14px;font-size:13px}
+    header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line)}
+    .nav{max-width:1150px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:20px;letter-spacing:.2px}
+    .brandmark{width:42px;height:42px;border-radius:12px;background:var(--red);display:grid;place-items:center;color:#fff;font-weight:900;font-size:19px}
+    .brand small{display:block;font-size:12px;color:var(--muted);font-weight:600;letter-spacing:1px}
+    nav{display:flex;gap:22px;font-size:14px;font-weight:700}
+    nav a:hover{color:var(--red)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:9px;font-weight:800;border:0;cursor:pointer;transition:.2s}
+    .btn-red{background:var(--red);color:#fff}.btn-red:hover{background:#a90d26;transform:translateY(-1px)}
+    .btn-dark{background:#151515;color:#fff}.btn-outline{border:1px solid #ddd;background:#fff}
+    .hero{background:radial-gradient(circle at 80% 25%,#3a3a3a 0,#191919 42%,#080808 100%);color:#fff;overflow:hidden}
+    .hero-inner{max-width:1150px;margin:auto;padding:76px 20px 72px;display:grid;grid-template-columns:1.05fr .95fr;gap:35px;align-items:center}
+    .eyebrow{color:#ffb5c1;font-size:13px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+    h1{font-size:clamp(34px,5vw,58px);line-height:1.14;margin:14px 0 18px;letter-spacing:-1px}
+    h1 span{color:#ff4b67}
+    .hero p{font-size:17px;color:#ddd;max-width:590px;margin:0 0 25px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero-visual{min-height:300px;position:relative;display:grid;place-items:center}
+    .bike-plate{width:min(100%,450px);aspect-ratio:1.18;border:1px solid #ffffff24;border-radius:28px;background:linear-gradient(145deg,#292929,#111);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 25px 70px #0008;position:relative;overflow:hidden}
+    .bike-plate:before{content:"";position:absolute;width:300px;height:300px;border:1px solid #ffffff18;border-radius:50%;box-shadow:0 0 0 35px #ffffff08,0 0 0 70px #ffffff05}
+    .bike-icon{font-size:112px;filter:drop-shadow(0 12px 8px #0008);position:relative}
+    .plate-label{position:relative;color:#fff;font-size:13px;letter-spacing:3px;font-weight:800;margin-top:5px}
+    .stats{max-width:1150px;margin:-25px auto 0;position:relative;padding:0 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .stat{background:#fff;border:1px solid var(--line);box-shadow:0 10px 30px #00000008;border-radius:14px;padding:19px 20px}
+    .stat strong{display:block;font-size:17px}.stat span{font-size:13px;color:var(--muted)}
+    section{padding:70px 20px}
+    .wrap{max-width:1150px;margin:auto}
+    .section-head{text-align:center;margin-bottom:32px}
+    .section-head .tag{color:var(--red);font-size:12px;letter-spacing:2px;font-weight:900}
+    h2{font-size:clamp(27px,3.5vw,38px);margin:8px 0 10px;line-height:1.2}
+    .section-head p{color:var(--muted);max-width:650px;margin:0 auto}
+    .models{background:var(--light)}
+    .model-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .model-card{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:.2s}
+    .model-card:hover{transform:translateY(-4px);box-shadow:0 16px 35px #0000000d}
+    .model-art{height:155px;display:grid;place-items:center;background:linear-gradient(135deg,#f4f4f4,#e8e8e8);font-size:64px;position:relative}
+    .model-art:after{content:"";position:absolute;bottom:24px;left:18%;right:18%;height:2px;background:#c8102e55}
+    .model-info{padding:20px}
+    .model-info h3{margin:0 0 4px;font-size:20px}
+    .model-info p{color:var(--muted);font-size:14px;margin:0 0 16px}
+    .model-info .btn{width:100%;padding:10px}
+    .finance{background:#fff}
+    .finance-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+    .finance-box{background:#171717;color:#fff;border-radius:22px;padding:34px}
+    .finance-box h2{margin-top:0}
+    .finance-box p{color:#d5d5d5}
+    .finance-list{display:grid;gap:13px;margin:22px 0}
+    .finance-list div{display:flex;gap:10px;align-items:flex-start}
+    .check{color:#ff536c;font-weight:900}
+    .info-card{border:1px solid var(--line);border-radius:18px;padding:28px}
+    .info-card h3{font-size:23px;margin:0 0 10px}
+    .info-card p{color:var(--muted)}
+    .contact{background:#f6f6f6}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .contact-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:25px}
+    .contact-card h3{margin:0 0 14px;font-size:21px}
+    .contact-line{margin:12px 0;color:#444}
+    .contact-line b{color:#111}
+    .phone-list{display:grid;gap:10px;margin:15px 0}
+    .phone{display:flex;justify-content:space-between;align-items:center;gap:10px;border:1px solid var(--line);border-radius:10px;padding:11px 13px}
+    .phone a{color:var(--red);font-weight:800}
+    .map-placeholder{min-height:190px;background:linear-gradient(135deg,#e8e8e8,#f9f9f9);border-radius:12px;display:grid;place-items:center;text-align:center;padding:20px;color:#555;margin-top:14px}
+    footer{background:#111;color:#ddd;padding:27px 20px;text-align:center;font-size:13px}
+    footer strong{color:#fff}
+    .float-wa{position:fixed;right:18px;bottom:18px;z-index:20;background:#168b4c;color:#fff;padding:13px 17px;border-radius:50px;font-weight:900;box-shadow:0 8px 25px #0003}
+    .fineprint{font-size:12px;color:#777;margin-top:20px}
+    @media(max-width:800px){nav{display:none}.hero-inner{grid-template-columns:1fr;padding-top:54px}.hero-visual{min-height:230px}.bike-plate{max-width:400px}.stats{grid-template-columns:1fr;margin-top:15px}.model-grid{grid-template-columns:repeat(2,1fr)}.finance-grid,.contact-grid{grid-template-columns:1fr}section{padding:52px 18px}}
+    @media(max-width:520px){.brand{font-size:17px}.brandmark{width:38px;height:38px}.hero-inner{padding:45px 18px}.model-grid{grid-template-columns:1fr}.model-art{height:135px}.finance-box,.info-card{padding:23px}.btn{padding:11px 14px}.phone{align-items:flex-start;flex-direction:column}}
+  </style>
+</head>
+<body>
+  <div class="topbar">DWARKESH HONDA • BAYAD, GUJARAT • બે-વ્હીલર અને ફાઇનાન્સ પૂછપરછ</div>
+  <header>
+    <div class="nav">
+      <a class="brand" href="#home" aria-label="Dwarkesh Honda Home">
+        <span class="brandmark">DH</span>
+        <span>DWARKESH HONDA<small>BAYAD • GUJARAT</small></span>
+      </a>
+      <nav>
+        <a href="#models">મોડલ્સ</a><a href="#finance">ફાઇનાન્સ</a><a href="#about">અમારા વિશે</a><a href="#contact">સંપર્ક</a>
+      </nav>
+      <a class="btn btn-red" href="https://wa.me/917575807547?text=Namaste%20Dwarkesh%20Honda%20Bayad%2C%20mujhe%20Honda%20vehicle%20ki%20jaankari%20chahiye." target="_blank" rel="noopener">WhatsApp કરો ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div>
+          <div class="eyebrow">તમારી સફરનો વિશ્વાસપાત્ર સાથી</div>
+          <h1>તમારી પસંદગી.<br><span>તમારી નવી સફર.</span></h1>
+          <p>Honda બાઇક અને સ્કૂટરના મોડલ વિશે માહિતી મેળવો. કિંમત, ઉપલબ્ધતા અને ફાઇનાન્સ માટે અમારી ટીમનો સંપર્ક કરો.</p>
+          <div class="hero-actions">
+            <a class="btn btn-red" href="#models">મોડલ્સ જુઓ ↓</a>
+            <a class="btn btn-outline" href="https://wa.me/919099940521?text=Namaste%20Dwarkesh%20Honda%20Bayad%2C%20mujhe%20vehicle%20finance%20ki%20jaankari%20chahiye." target="_blank" rel="noopener">લોન વિશે પૂછો</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Motorcycle illustration">
+          <div class="bike-plate">
+            <div class="bike-icon">🏍️</div>
+            <div class="plate-label">RIDE YOUR WAY</div>
+            <div style="color:#aaa;font-size:12px;position:relative;margin-top:8px">DWARKESH HONDA • BAYAD</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="stats">
+      <div class="stat"><strong>🏍️ બાઇક અને સ્કૂટર</strong><span>તમારી જરૂરિયાત પ્રમાણે મોડલ પસંદ કરો</span></div>
+      <div class="stat"><strong>💳 ફાઇનાન્સ પૂછપરછ</strong><span>લોન અને EMIની વિગતો માટે સંપર્ક કરો</span></div>
+      <div class="stat"><strong>📍 Bayad, Gujarat</strong><span>શોરૂમની વિગતો અને સંપર્ક એક જ જગ્યાએ</span></div>
+    </div>
+
+    <section class="models" id="models">
+      <div class="wrap">
+        <div class="section-head"><div class="tag">OUR LINEUP</div><h2>તમારી પસંદગીનું Honda મોડલ</h2><p>મોડલની ઉપલબ્ધતા, વર્ઝન, રંગ અને હાલની કિંમત માટે WhatsApp પર પૂછપરછ કરો.</p></div>
+        <div class="model-grid">
+          <article class="model-card"><div class="model-art">🏍️</div><div class="model-info"><h3>Honda SP125</h3><p>સ્ટાઇલિશ કમ્યુટર બાઇક</p><a class="btn btn-dark" href="https://wa.me/917575807547?text=Honda%20SP125%20ni%20price%20ane%20availability%20janavo." target="_blank" rel="noopener">કિંમત પૂછો</a></div></article>
+          <article class="model-card"><div class="model-art">🏍️</div><div class="model-info"><h3>Honda Shine 125</h3><p>રોજિંદી સફર માટે લોકપ્રિય પસંદગી</p><a class="btn btn-dark" href="https://wa.me/917575807547?text=Honda%20Shine%20125%20ni%20price%20ane%20availability%20janavo." target="_blank" rel="noopener">કિંમત પૂછો</a></div></article>
+          <article class="model-card"><div class="model-art">🏍️</div><div class="model-info"><h3>Honda Shine 100</h3><p>દૈનિક ઉપયોગ માટે કમ્યુટર બાઇક</p><a class="btn btn-dark" href="https://wa.me/917575807547?text=Honda%20Shine%20100%20ni%20price%20ane%20availability%20janavo." target="_blank" rel="noopener">કિંમત પૂછો</a></div></article>
+          <article class="model-card"><div class="model-art">🛵</div><div class="model-info"><h3>Honda Activa</h3><p>શહેરની સફર માટે સ્કૂટર</p><a class="btn btn-dark" href="https://wa.me/917575807547?text=Honda%20Activa%20ni%20price%20ane%20availability%20janavo." target="_blank" rel="noopener">કિંમત પૂછો</a></div></article>
+          <article class="model-card"><div class="model-art">🛵</div><div class="model-info"><h3>Honda Dio</h3><p>યુવા અને આધુનિક સ્ટાઇલ</p><a class="btn btn-dark" href="https://wa.me/917575807547?text=Honda%20Dio%20ni%20price%20ane%20availability%20janavo." target="_blank" rel="noopener">કિંમત પૂછો</a></div></article>
+          <article class="model-card"><div class="model-art">🏍️</div><div class="model-info"><h3>બીજા Honda મોડલ્સ</h3><p>ઉપલબ્ધ મોડલ અને વેરિઅન્ટ માટે પૂછો</p><a class="btn btn-dark" href="https://wa.me/919099940521?text=Available%20Honda%20models%20ni%20list%20moklo." target="_blank" rel="noopener">મોડલ્સ પૂછો</a></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="finance" id="finance">
+      <div class="wrap finance-grid">
+        <div class="finance-box">
+          <div class="eyebrow">FINANCE ENQUIRY</div>
+          <h2>તમારી EMI વિશે વાત કરીએ.</h2>
+          <p>ફાઇનાન્સની ઉપલબ્ધતા, ડાઉન પેમેન્ટ, EMI અને જરૂરી દસ્તાવેજો વિશે જાણકારી માટે સંપર્ક કરો.</p>
+          <div class="finance-list">
+            <div><span class="check">✓</span><span>તમારી જરૂરિયાત પ્રમાણે ફાઇનાન્સ પૂછપરછ</span></div>
+            <div><span class="check">✓</span><span>EMI અને ડાઉન પેમેન્ટ વિશે માર્ગદર્શન</span></div>
+            <div><span class="check">✓</span><span>દસ્તાવેજોની માહિતી અને આગળની પ્રક્રિયા</span></div>
+          </div>
+          <a class="btn btn-red" href="https://wa.me/919099940521?text=Namaste%2C%20Honda%20vehicle%20finance%20ane%20EMI%20vishe%20janakari%20aapo." target="_blank" rel="noopener">ફાઇનાન્સ માટે WhatsApp કરો ↗</a>
+        </div>
+        <div class="info-card" id="about">
+          <h3>Dwarkesh Honda, Bayad</h3>
+          <p>તમારી Honda બે-વ્હીલર પસંદગી અને ફાઇનાન્સ સંબંધિત પૂછપરછ માટે અમારો સંપર્ક કરો. અમારી ટીમ તમને ઉપલબ્ધ મોડલ, કિંમત અને પ્રક્રિયા વિશે માર્ગદર્શન આપશે.</p>
+          <p><b>Manager:</b> Vijay Makvana</p>
+          <p><b>સરનામું:</b> Janmangal Complex, Jio Petrol Pump સામે, Bayad, Gujarat.</p>
+          <a class="btn btn-outline" href="#contact">સંપર્ક વિગતો જુઓ</a>
+          <p class="fineprint">કિંમત, ઉપલબ્ધતા અને ફાઇનાન્સની મંજૂરી લાગુ શરતો તથા લોન આપનાર સંસ્થાની ચકાસણીને આધિન છે.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <div class="section-head"><div class="tag">GET IN TOUCH</div><h2>અમારો સંપર્ક કરો</h2><p>મોડલ, કિંમત, ટેસ્ટ રાઇડ અથવા ફાઇનાન્સ વિશે પૂછપરછ કરવા માટે ફોન કે WhatsApp કરો.</p></div>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>📞 ફોન અને WhatsApp</h3>
+            <div class="phone-list">
+              <div class="phone"><span><b>સંપર્ક નંબર 1</b><br>+91 75758 07547</span><a href="https://wa.me/917575807547" target="_blank" rel="noopener">WhatsApp ↗</a></div>
+              <div class="phone"><span><b>સંપર્ક નંબર 2</b><br>+91 90999 40521</span><a href="https://wa.me/919099940521" target="_blank" rel="noopener">WhatsApp ↗</a></div>
+            </div>
+            <div class="contact-line"><b>મેનેજર:</b> Vijay Makvana</div>
+          </div>
+          <div class="contact-card">
+            <h3>📍 શોરૂમનું સરનામું</h3>
+            <div class="contact-line"><b>Dwarkesh Honda</b></div>
+            <div class="contact-line">Janmangal Complex, Jio Petrol Pump સામે,<br>Bayad, Gujarat, India.</div>
+            <a class="btn btn-red" href="https://www.google.com/maps/search/?api=1&query=Dwarkesh+Honda+Janmangal+Complex+Jio+Petrol+Pump+Bayad+Gujarat" target="_blank" rel="noopener">Google Maps પર જુઓ ↗</a>
+            <div class="map-placeholder">📍<br><b>Dwarkesh Honda — Bayad</b><br><span style="font-size:13px">Google Maps ખોલવા ઉપર ક્લિક કરો</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <strong>DWARKESH HONDA • BAYAD</strong><br>
+    તમારી સફર, તમારી પસંદગી.<br>
+    <span style="color:#999">આ વેબસાઇટ સ્થાનિક શોરૂમની માહિતી અને પૂછપરછ માટે છે. મોડલની ઉપલબ્ધતા અને કિંમતો બદલાઈ શકે છે.</span>
+  </footer>
+  <a class="float-wa" href="https://wa.me/917575807547?text=Namaste%20Dwarkesh%20Honda%20Bayad" target="_blank" rel="noopener" aria-label="WhatsApp">☏ WhatsApp</a>
+</body>
+</html>
